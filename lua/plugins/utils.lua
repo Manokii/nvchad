@@ -12,6 +12,7 @@
 return {
   { "mg979/vim-visual-multi", lazy = false }, -- Visual multi cursor
   { "numToStr/Comment.nvim", opts = {}, lazy = false },
+  { "echasnovski/mini.ai", opts = {}, lazy = false },
   {
     "windwp/nvim-autopairs",
     event = "InsertEnter",

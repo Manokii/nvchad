@@ -6,7 +6,7 @@
 local M = {}
 
 M.base46 = {
-  theme = "github_light",
+  theme = "tundra",
   transparency = true,
   -- hl_override = {
   -- 	Comment = { italic = true },
@@ -20,8 +20,8 @@ M.nvdash = {
 
 M.ui = {
   statusline = {
-    theme = "vscode_colored",
-    -- separator_style = "round",
+    theme = "minimal",
+    separator_style = "round",
   },
   cmp = {
     lspkind_text = true,

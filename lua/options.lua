@@ -7,7 +7,7 @@ o.cursorlineopt = "both" -- to enable cursorline!
 o.relativenumber = true
 o.scrolloff = 10
 vim.opt.inccommand = "split" -- Preview substitutions live, as you type!
-o.colorcolumn = "80,100"
+o.colorcolumn = "80"
 
 vim.api.nvim_create_autocmd("BufWritePre", {
   pattern = "*",

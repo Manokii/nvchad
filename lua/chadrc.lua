@@ -7,31 +7,50 @@ local M = {}
 
 M.base46 = {
   theme = "tundra",
-  transparency = true,
-  -- hl_override = {
-  -- 	Comment = { italic = true },
-  -- 	["@comment"] = { italic = true },
-  -- },
+  transparency = false,
+  hl_override = {
+    Comment = { italic = true },
+    ["@comment"] = { italic = true },
+  },
 }
 
 M.nvdash = {
-  -- load_on_startup = true,
+  load_on_startup = true,
 }
 
 M.ui = {
   statusline = {
-    theme = "minimal",
-    separator_style = "round",
+    theme = "vscode_colored",
+    -- separator_style = "round",
   },
   cmp = {
     lspkind_text = true,
-    style = "default", -- default/flat_light/flat_dark/atom/atom_colored
+    style = "flat_dark", -- default/flat_light/flat_dark/atom/atom_colored
     format_colors = {
       tailwind = true,
     },
     icons_left = true,
   },
+
+  tabufline = { enabled = false },
+  telescope = { style = "borderless" }, -- borderless / bordered
 }
+
+M.lsp = { signature = true }
+
+-- M.mason = {
+--   pkgs = {
+--     "biome",
+--     "lua-language-server",
+--     "ruff",
+--     "css-lsp",
+--     "pyright",
+--     "stylua",
+--     "typescript-language-server",
+--     "tailwindcss-language-server",
+--     "html-lsp",
+--   },
+-- }
 
 M.colorify = {
   enabled = true,

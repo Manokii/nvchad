@@ -1,8 +1,19 @@
 -- require "nvchad.mappings"
-
--- add yours here
-
 local map = vim.keymap.set
+
+-- PERSONAL KEYMAPS
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "javascript", "typescript", "javascriptreact", "typescriptreact" },
+  callback = function()
+    vim.keymap.set("x", "<leader>cl", function()
+      vim.cmd 'normal! "ay'
+      local yanked_text = vim.fn.getreg "a"
+      local console_statement = string.format('console.log("%s:", %s)', yanked_text, yanked_text)
+      vim.cmd("normal! o" .. console_statement)
+    end, { buffer = true, noremap = true, desc = "Console log selected text" })
+  end,
+})
 
 -- DEFAULT MAPPING
 

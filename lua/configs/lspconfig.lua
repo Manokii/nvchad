@@ -67,7 +67,9 @@ lspconfig.ts_ls.setup {
         includeInlayVariableTypeHints = false,
       },
     },
-
+    implicitProjectConfiguration = {
+      checkJs = true,
+    },
     typescript = {
       inlayHints = {
         includeInlayEnumMemberValueHints = true,

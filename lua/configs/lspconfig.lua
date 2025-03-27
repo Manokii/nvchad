@@ -32,7 +32,7 @@ end
 
 local on_attach = function(client, bufnr)
   if client.server_capabilities.inlayHintProvider then
-    vim.keymap.set("n", "<leader>th", function()
+    vim.keymap.set("n", "<leader>ti", function()
       vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
     end, { silent = true, desc = "Toggle inlay hints" })
   end

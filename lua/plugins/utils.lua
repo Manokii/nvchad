@@ -42,4 +42,10 @@ return {
     },
     opts = {}, -- your configuration
   },
+  {
+    "lukas-reineke/indent-blankline.nvim",
+    opts = {
+      enabled = false,
+    },
+  },
 }
